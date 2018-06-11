@@ -20,9 +20,9 @@
 @set LJLIB=lib /nologo /nodefaultlib
 @set DASMDIR=..\dynasm
 @set DASM=%DASMDIR%\dynasm.lua
-@set DASC=vm_x86.dasc
-@set LJBINPATH=..\bin\
 @set LJTARGETARCH=%1
+@set DASC=vm_%LJTARGETARCH%.dasc
+@set LJBINPATH=..\bin\
 @if defined LJTARGETARCH (
   @set LJBINPATH=%LJBINPATH%%LJTARGETARCH%\
 )
@@ -47,12 +47,7 @@ if exist minilua.exe.manifest^
 @set DASMFLAGS=-D WIN -D JIT -D FFI
 @set LJARCH=x86
 :X64
-::KRodin: Пускай gc64 используется по умолчанию при сборке для x64
-::@if "%2" neq "gc64" goto :NOGC64
-@shift
-@set DASC=vm_x64.dasc
 @set LJCOMPILE=%LJCOMPILE% /DLUAJIT_ENABLE_GC64
-:NOGC64
 minilua %DASM% -LN %DASMFLAGS% -o host\buildvm_arch.h %DASC%
 @if errorlevel 1 goto :BAD
 
