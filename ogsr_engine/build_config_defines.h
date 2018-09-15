@@ -4,7 +4,7 @@
 
 //****************************************************************************************************
 // Сборка в режиме совместимости с вальнильным ТЧ. Выключает специфичные для ОГСЕ правки.
-//#define SHOC_EDITION
+#define SHOC_EDITION
 
 //Хак, чтобы AppVeyor собирал именно SHOC_EDITION
 #if __has_include("hack.appveyor")
@@ -35,7 +35,7 @@
 // Показывать расширенное контекстное меню для равнознычных слотов.
 // Добовляет пункты переместить в каждый доступный слот
 // Для адднов добовляет пункты установить на каждое доступное оружие
-//#define NEW_WPN_SLOTS_EXTEND_MENU
+#define NEW_WPN_SLOTS_EXTEND_MENU
 
 // Оружие на классе бинокля будет вести себя, как оружие,
 // т.е. стрелять, показывать кол-во патронов на худе и т.п. Бинокль
@@ -86,7 +86,7 @@
 #define SHOTG_EXTRA_AMMO_FIX
 
 // Red Virus: bobbing effect from lost alpha
-//#define WPN_BOBBING
+#define WPN_BOBBING
 
 // Очистка списка задач при загрузке сейва от выполненных и проваленных
 //#define KEEP_INPROGRESS_TASKS_ONLY
@@ -114,7 +114,7 @@
 // Радиоактивные предметы в инвентаре будут увеличивать радиацию. Тоже самое
 // касается предметов, которые ухудшают пси-здоровье, если определен
 // AF_PSY_HEALTH.
-//#define OBJECTS_RADIOACTIVE
+#define OBJECTS_RADIOACTIVE
 
 // Артефакты с нулевым состоянием работать не будут.
 #define AF_ZERO_CONDITION
@@ -181,14 +181,14 @@
 //#define CRASH_ON_INVALID_VERTEX_ID
 
 // Включает раскраску предметов в окне торговца.
-//#define COLORIZE_OTHER_TRADE
+#define COLORIZE_OTHER_TRADE
 
 // Выставлять для оружия состояние eSubstateIdleMoving при actor->is_actor_walking() || actor->is_actor_creeping() || actor->is_actor_crouching()
 // Включает анимацию anim_idle_moving
 //#define MORE_WPN_IDLE_MOVING_STATES
 
 // Цена оружия будет включать в себя стоимость установленных аддонов
-//#define WPN_COST_INCLUDE_ADDONS
+#define WPN_COST_INCLUDE_ADDONS
 
 // Изменяет принцип работы дуплета для оружия на классе CWeaponShotgun
 // Вместо дуплета по кнопке прицеливания, дуплет можно включить\выключить скриптом 
