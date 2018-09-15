@@ -4,7 +4,7 @@
 
 //****************************************************************************************************
 // Сборка в режиме совместимости с вальнильным ТЧ. Выключает специфичные для ОГСЕ правки.
-#define SHOC_EDITION
+//#define SHOC_EDITION
 
 //Хак, чтобы AppVeyor собирал именно SHOC_EDITION
 #if __has_include("hack.appveyor")
@@ -72,7 +72,7 @@
 #define CORPSES_COLLISION
 
 // Скрывать оружие при открытом диалоге, инвентаре и т.п.
-//#define MORE_HIDE_WEAPON
+#define MORE_HIDE_WEAPON
 
 // Включает альтернативную реализацию загрузки скриптов из подкаталогов scripts ( из CoC ).
 // KRodin: По умолчанию используется реализация из xp-dev, т.к. реализация из CoC лично у меня глючит.
@@ -86,7 +86,7 @@
 #define SHOTG_EXTRA_AMMO_FIX
 
 // Red Virus: bobbing effect from lost alpha
-#define WPN_BOBBING
+//#define WPN_BOBBING
 
 // Очистка списка задач при загрузке сейва от выполненных и проваленных
 //#define KEEP_INPROGRESS_TASKS_ONLY
@@ -98,7 +98,7 @@
 // иконке. Включает поддержку аттрибута condition_progress_bar для
 // dragdrop элементов и статиков condition_progess_bar и
 // cell_item_text.
-//#define SHOW_INV_ITEM_CONDITION
+#define SHOW_INV_ITEM_CONDITION
 
 // Показывать порядковый номер перед фразами в диалогах. Для этой
 // опции необходимо изменить talk.xml и добавить туда статик
@@ -106,10 +106,10 @@
 // номера соответствуют акселлераторам, назначенным этим фразам. Этот
 // дефайн нужен только для отображения номеров. Акселлераторы работают
 // без этого дефайна.
-//#define SHOW_DIALOG_NUMBERS
+#define SHOW_DIALOG_NUMBERS
 
 // эффект Доплера для звука из xp-dev
-//#define SND_DOPPLER_EFFECT
+#define SND_DOPPLER_EFFECT
 
 // Радиоактивные предметы в инвентаре будут увеличивать радиацию. Тоже самое
 // касается предметов, которые ухудшают пси-здоровье, если определен
@@ -163,12 +163,12 @@
 #	define OGSE_NEW_SLOTS
 
 // ОГСЕ-специфичная система оружейного зума. С ванильным ТЧ несовместима без правки оружейных конфигов.
-#	define OGSE_WPN_ZOOM_SYSTEM
+//#	define OGSE_WPN_ZOOM_SYSTEM
 #endif
 
 #ifdef SHOC_EDITION
 // Использовать старый режим для отрисовки экранов загрузки
-#   define USE_LEGACY_LOAD_SCREENS
+//#   define USE_LEGACY_LOAD_SCREENS
 #endif
 
 // Включает кастомное окно с сообщением об ошибках, выключает стандартное "Прекращена работа программы..."
